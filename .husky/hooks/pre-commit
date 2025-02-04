@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# verify
+go mod verify
+
+# lint
+golint ./...
+
+# vet
+go vet ./...
+
+# imports
+goimports -l -w .
+
+# format
+go fmt ./...
+
+# test
+go test -v ./...
+
+# benchmark
+go test -v -benchmem -bench . ./...
+

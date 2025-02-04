@@ -1,0 +1,178 @@
+{
+  "version": "2.0.0",
+  "cwd": "${workspaceFolder}",
+  "tasks": [
+    {
+      "label": "Go: Install/Update Tools",
+      "group": "build",
+      "type": "shell",
+      "dependsOrder": "parallel",
+      "dependsOn": [
+        "Go: Install/Update goplay",
+        "Go: Install/Update gotests",
+        "Go: Install/Update dlv",
+        "Go: Install/Update gomodifytags",
+        "Go: Install/Update golint",
+        "Go: Install/Update impl",
+        "Go: Install/Update gopls",
+        "Go: Install/Update goimports",
+        "Go: Install/Update husky",
+        "Go: Install/Update commitlint"
+      ]
+    },
+    {
+      "label": "Go: Install/Update goplay",
+      "command": "go",
+      "args": ["install", "github.com/haya14busa/goplay/cmd/goplay@v1.0.0"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update gotests",
+      "command": "go",
+      "args": ["install", "github.com/cweill/gotests/gotests@v1.6.0"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update dlv",
+      "command": "go",
+      "args": ["install", "github.com/go-delve/delve/cmd/dlv@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update gomodifytags",
+      "command": "go",
+      "args": ["install", "github.com/fatih/gomodifytags@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update golint",
+      "command": "go",
+      "args": ["install", "golang.org/x/lint/golint@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update impl",
+      "command": "go",
+      "args": ["install", "github.com/josharian/impl@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update gopls",
+      "command": "go",
+      "args": ["install", "golang.org/x/tools/gopls@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update goimports",
+      "command": "go",
+      "args": ["install", "golang.org/x/tools/cmd/goimports@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install/Update husky",
+      "command": "go",
+      "args": ["install", "github.com/automation-co/husky@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+        {
+      "label": "Go: Install/Update commitlint",
+      "command": "go",
+      "args": ["install", "github.com/conventionalcommit/commitlint@latest"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Init",
+      "command": "go",
+      "args": ["mod", "init"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Tidy",
+      "command": "go",
+      "args": ["mod", "tidy"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Get",
+      "command": "go",
+      "args": ["get", "./..."],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Interface{} -> Any",
+      "command": "gofmt",
+      "args": ["-w", "-r", "interface{} -> any", "../."],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Upgrade",
+      "command": "go",
+      "args": ["get", "-u", "./..."],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Install",
+      "command": "go",
+      "args": ["install", "-v", "./..."],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Run",
+      "command": "go",
+      "args": ["run", "main.go"],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Test",
+      "command": "go",
+      "args": ["test", "-v", "./..."],
+      "group": "test",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Bench",
+      "command": "go",
+      "args": ["test", "-v", "-benchmem", "-bench", ".", "./..."],
+      "group": "test",
+      "type": "shell"
+    },
+    {
+      "label": "Go: test env",
+      "command": "echo ${MSYS_NO_PATHCONV}",
+      "args": [""],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Generate self-signed ssl certificate (interactive)",
+      "command": "openssl req -x509 -newkey rsa:4096 -keyout ./pkg/net/https/certs/server.key -out ./pkg/net/https/certs/server.pem -sha256 -days 36500 -nodes",
+      "args": [""],
+      "group": "build",
+      "type": "shell"
+    },
+    {
+      "label": "Go: Generate self-signed ssl certificate (non-interactive)",
+      "command": "openssl req -x509 -newkey rsa:4096 -keyout ./pkg/net/https/certs/server.key -out ./pkg/net/https/certs/server.pem -sha256 -days 36500 -nodes -subj \"/C=CN/ST=JX/L=GA/O=SNOWDREAMTECH/OU=R&D Department/CN=localhost\"",
+      "args": [""],
+      "group": "build",
+      "type": "shell"
+    }
+  ]
+}

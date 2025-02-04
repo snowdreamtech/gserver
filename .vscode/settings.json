@@ -1,0 +1,30 @@
+{
+  "terminal.integrated.env.windows": {
+    "GOPROXY": "https://proxy.golang.com.cn,direct"
+  },
+  "terminal.integrated.env.linux": {
+    "GOPROXY": "https://proxy.golang.com.cn,direct"
+  },
+  "terminal.integrated.env.osx": {
+    "GOPROXY": "https://proxy.golang.com.cn,direct"
+  },
+  "go.lintOnSave": "workspace",
+  "go.vetOnSave": "workspace",
+  "go.buildTags": "",
+  "go.buildFlags": [],
+  "go.lintTool": "golint",
+  "go.lintFlags": [],
+  "go.vetFlags": [],
+  "go.testOnSave": false,
+  "go.coverOnSave": false,
+  "editor.formatOnSave": true,
+  "go.formatTool": "goimports",
+  "go.formatFlags": [],
+  "go.goroot": "",
+  "go.gopath": "",
+  "go.inferGopath": true,
+  "go.testFlags": [
+    "-v"
+  ],
+  "editor.formatOnPaste": true
+}
