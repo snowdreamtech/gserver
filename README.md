@@ -1,15 +1,15 @@
-# http-server
+# gserver
 
 ## Installation
 
 ```bash
-go install github.com/snowdreamtech/go-http-server
+go install github.com/snowdreamtech/gserver
 ```
 
 ## Usage
 
 ```bash
-$ ./http-server --help
+$ gserver --help
 A Simple Static HTTP Server built with gin and golang.
 
 Usage:
@@ -94,7 +94,7 @@ Use " [command] --help" for more information about a command.
 
 ```
 
-## License 
+## License
 
 ```bash
 (The MIT License)
