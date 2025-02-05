@@ -4,7 +4,7 @@
 export ProjectName="go_http_server"
 Author="Yang Hui <sn0wdr1am@qq.com>"
 LICENSE="Copyright (c) 2023-present SnowdreamTech Inc."
-CmdPath="snowdream.tech/gserver/pkg/env"
+CmdPath="github.com/snowdreamtech/gserver/pkg/env"
 BuildTime=$(date +'%Y.%m.%d.%H%M%S%z')
 CommitHash=N/A
 CommitHashFull=N/A

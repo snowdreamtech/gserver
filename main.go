@@ -1,7 +1,7 @@
 package main
 
 import (
-	"snowdream.tech/gserver/cmd/server"
+	"github.com/snowdreamtech/gserver/cmd/server"
 )
 
 func main() {

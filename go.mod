@@ -1,4 +1,4 @@
-module snowdream.tech/gserver
+module github.com/snowdreamtech/gserver
 
 go 1.23.5
 

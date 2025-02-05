@@ -6,9 +6,9 @@ import (
 
 	"github.com/gin-gonic/gin"
 	libredis "github.com/redis/go-redis/v9"
-	"snowdream.tech/gserver/pkg/configs"
-	ghttp "snowdream.tech/gserver/pkg/net/http"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/configs"
+	ghttp "github.com/snowdreamtech/gserver/pkg/net/http"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 
 	limiter "github.com/ulule/limiter/v3"
 	mgin "github.com/ulule/limiter/v3/drivers/middleware/gin"

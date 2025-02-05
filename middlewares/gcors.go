@@ -6,7 +6,7 @@ import (
 
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 const (

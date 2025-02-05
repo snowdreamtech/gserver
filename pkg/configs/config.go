@@ -4,9 +4,9 @@ import (
 	"github.com/fsnotify/fsnotify"
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
-	"snowdream.tech/gserver/pkg/env"
-	"snowdream.tech/gserver/pkg/os"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/env"
+	"github.com/snowdreamtech/gserver/pkg/os"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 // default config names
@@ -32,7 +32,7 @@ var (
 
 const (
 	// ConfigKey ConfigKey
-	ConfigKey = "snowdream.tech/gserver/pkg/configs/configkey"
+	ConfigKey = "github.com/snowdreamtech/gserver/pkg/configs/configkey"
 )
 
 // Configs Configs

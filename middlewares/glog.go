@@ -8,8 +8,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"gopkg.in/natefinch/lumberjack.v2"
-	"snowdream.tech/gserver/pkg/configs"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/configs"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 // LoggerWithFormatter instance a Logger middleware with the specified log format function.

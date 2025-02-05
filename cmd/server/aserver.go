@@ -18,14 +18,14 @@ import (
 	"github.com/spf13/cobra"
 	"go.uber.org/automaxprocs/maxprocs"
 	"golang.org/x/crypto/acme/autocert"
-	"snowdream.tech/gserver/middlewares"
-	"snowdream.tech/gserver/pkg/configs"
-	"snowdream.tech/gserver/pkg/env"
-	glog "snowdream.tech/gserver/pkg/log"
-	gnet "snowdream.tech/gserver/pkg/net"
-	ghttp "snowdream.tech/gserver/pkg/net/http"
-	ghttps "snowdream.tech/gserver/pkg/net/https"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/middlewares"
+	"github.com/snowdreamtech/gserver/pkg/configs"
+	"github.com/snowdreamtech/gserver/pkg/env"
+	glog "github.com/snowdreamtech/gserver/pkg/log"
+	gnet "github.com/snowdreamtech/gserver/pkg/net"
+	ghttp "github.com/snowdreamtech/gserver/pkg/net/http"
+	ghttps "github.com/snowdreamtech/gserver/pkg/net/https"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 var (

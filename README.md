@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-go install github.com/snowdreamtech/gserver
+go install github.com/snowdreamtech/gserver@latest
 ```
 
 ## Usage

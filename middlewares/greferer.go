@@ -5,8 +5,8 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"snowdream.tech/gserver/pkg/configs"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/configs"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 // Referer Referer

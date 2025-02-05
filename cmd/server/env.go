@@ -6,7 +6,7 @@ import (
 	"strings"
 
 	"github.com/spf13/cobra"
-	"snowdream.tech/gserver/pkg/env"
+	"github.com/snowdreamtech/gserver/pkg/env"
 )
 
 func init() {

@@ -4,7 +4,7 @@ import (
 	"net"
 	"strconv"
 
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 // IsPortAvailable Is Port Available

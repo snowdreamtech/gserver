@@ -3,8 +3,8 @@ package middlewares
 import (
 	"github.com/gin-contrib/gzip"
 	"github.com/gin-gonic/gin"
-	"snowdream.tech/gserver/pkg/configs"
-	"snowdream.tech/gserver/pkg/tools"
+	"github.com/snowdreamtech/gserver/pkg/configs"
+	"github.com/snowdreamtech/gserver/pkg/tools"
 )
 
 var excludedExtentions = []string{

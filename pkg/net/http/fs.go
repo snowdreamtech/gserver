@@ -19,8 +19,8 @@ import (
 
 	"github.com/docker/go-units"
 	"github.com/juju/ratelimit"
-	"snowdream.tech/gserver/pkg/configs"
-	"snowdream.tech/gserver/pkg/io"
+	"github.com/snowdreamtech/gserver/pkg/configs"
+	"github.com/snowdreamtech/gserver/pkg/io"
 )
 
 // condResult is the result of an HTTP request precondition check.

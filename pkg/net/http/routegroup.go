@@ -11,7 +11,7 @@ import (
 	"strings"
 
 	"github.com/gin-gonic/gin"
-	"snowdream.tech/gserver/pkg/env"
+	"github.com/snowdreamtech/gserver/pkg/env"
 )
 
 // Static serves files from the given file system root.
