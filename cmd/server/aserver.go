@@ -15,9 +15,6 @@ import (
 
 	"github.com/common-nighthawk/go-figure"
 	"github.com/gin-gonic/gin"
-	"github.com/spf13/cobra"
-	"go.uber.org/automaxprocs/maxprocs"
-	"golang.org/x/crypto/acme/autocert"
 	"github.com/snowdreamtech/gserver/middlewares"
 	"github.com/snowdreamtech/gserver/pkg/configs"
 	"github.com/snowdreamtech/gserver/pkg/env"
@@ -26,6 +23,9 @@ import (
 	ghttp "github.com/snowdreamtech/gserver/pkg/net/http"
 	ghttps "github.com/snowdreamtech/gserver/pkg/net/https"
 	"github.com/snowdreamtech/gserver/pkg/tools"
+	"github.com/spf13/cobra"
+	"go.uber.org/automaxprocs/maxprocs"
+	"golang.org/x/crypto/acme/autocert"
 )
 
 var (
@@ -314,7 +314,7 @@ func Execute() {
 }
 
 func welcome() {
-	myFigure := figure.NewColorFigure("SnowdreamTech Static HTTP Server", "larry3d", "green", true)
+	myFigure := figure.NewColorFigure("GSERVER", "larry3d", "green", true)
 	myFigure.Blink(1000, 1000, 0)
 	figureString := myFigure.ColorString()
 
