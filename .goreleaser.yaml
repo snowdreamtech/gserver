@@ -94,6 +94,9 @@ changelog:
     exclude:
       - "^test:"
       - "^chore"
+      - "^ci"
+      - "^build"
+      - "^style"
       - "merge conflict"
       - Merge pull request
       - Merge remote-tracking branch
