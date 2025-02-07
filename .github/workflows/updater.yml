@@ -2,22 +2,6 @@ name: GitHub Actions Version Updater
 
 # Controls when the action will run.
 on:
-  push:
-    branches:
-      - "main"
-      - "dev"
-      - "feat/**"
-      - "feature/**"
-      - "fix/**"
-      - "pr/**"
-  pull_request:
-    branches:
-      - "main"
-      - "dev"
-      - "feat/**"
-      - "feature/**"
-      - "fix/**"
-      - "pr/**"
   schedule:
     # Automatically run on every Day
     - cron: "02 19 * * *"
