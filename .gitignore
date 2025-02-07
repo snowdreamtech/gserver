@@ -241,3 +241,5 @@ PKCS1PrivateKey.pem
 PKCS1PublicKey.pem
 PKCS8PrivateKey.pem
 PKIXPublicKey.pem
+
+dist/
