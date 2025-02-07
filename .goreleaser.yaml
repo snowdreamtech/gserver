@@ -19,20 +19,20 @@ builds:
   - env:
       - CGO_ENABLED=0
     goos:
-      - aix
-      - android
+      # - aix
+      # - android
       - darwin
-      - dragonfly
+      # - dragonfly
       - freebsd
-      - illumos
-      - ios
-      - js
+      # - illumos
+      # - ios
+      # - js
       - linux
       - netbsd
       - openbsd
-      - plan9
+      # - plan9
       - solaris
-      - wasip1
+      # - wasip1
       - windows
     goarch:
       - 386
@@ -48,7 +48,7 @@ builds:
       - ppc64le
       - riscv64
       - s390x
-      - wasm
+      # - wasm
     # goamd64:
     #   - v2
     #   - v3
@@ -58,9 +58,9 @@ builds:
       - 7
     # goarm64:
     #   - v8.0
-    gomips:
-      - hardfloat
-      - softfloat
+    # gomips:
+    #   - hardfloat
+    #   - softfloat
     # go386:
     #   - sse2
     #   - softfloat
@@ -70,7 +70,7 @@ builds:
     # goriscv64:
     #   - rva22u64
     ignore:
-      - goos: android
+      - goos: plan9
         goarch: 386
 archives:
   - format: tar.gz
