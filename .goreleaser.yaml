@@ -106,6 +106,9 @@ changelog:
     - title: "New Features"
       regexp: "^.*feat[(\\w)]*:+.*$"
       order: 100
+    - title: "Refactoring"
+      regexp: "^.*refactor[(\\w)]*:+.*$"
+      order: 150
     - title: "Bug Fixes"
       regexp: "^.*fix[(\\w)]*:+.*$"
       order: 200
