@@ -1,12 +1,44 @@
 # gserver
 
+[![gserver](http://dockeri.co/image/snowdreamtech/gserver)](https://hub.docker.com/r/snowdreamtech/gserver)
+
 ## Installation
+
+### CLI
 
 ```bash
 go install github.com/snowdreamtech/gserver@latest
 ```
 
+### Docker CLI
+
+#### [Dockerhub](https://hub.docker.com/r/snowdreamtech/gserver)
+
+```bash
+docker pull snowdreamtech/gserver:latest
+  # snowdreamtech/gserver:alpine
+  # snowdreamtech/gserver:debian
+```
+
+#### [GitHub Container Registry](https://github.com/snowdreamtech/gserver/pkgs/container/gserver)
+
+```bash
+docker pull ghcr.io/snowdreamtech/gserver:latest
+  # ghcr.io/snowdreamtech/gserver:alpine
+  # ghcr.io/snowdreamtech/gserver:debian
+```
+
+#### [Quay.io](https://quay.io/repository/snowdreamtech/gserver)
+
+```bash
+docker pull quay.io/snowdreamtech/gserver:latest
+  # quay.io/snowdreamtech/gserver:alpine
+  # quay.io/snowdreamtech/gserver:debian
+```
+
 ## Usage
+
+### CLI
 
 ```bash
 $ gserver --help
@@ -92,6 +124,21 @@ Flags:
 
 Use " [command] --help" for more information about a command.
 
+```
+
+### Docker CLI
+
+```bash
+docker run -d \
+  --name=gserver \
+  -e TZ=Etc/UTC \
+  -p 8080:8080 \
+  -p 8443:8443 \
+  -v /path/to/gserver:/var/lib/gserver  \
+  --restart unless-stopped \
+  snowdreamtech/gserver:latest
+  # snowdreamtech/gserver:alpine
+  # snowdreamtech/gserver:debian
 ```
 
 ## License
