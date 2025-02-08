@@ -90,7 +90,6 @@ archives:
       - LICENSE
       - README.md
 
-      
 changelog:
   sort: asc
   use: git
@@ -107,18 +106,17 @@ changelog:
       - Merge branch
       - go mod tidy
   groups:
-    - title: "Dependency Updates"
-      regexp: "^.*(feat|fix)\\(deps\\)*:+.*$"
-      order: 300
     - title: "New Features"
       regexp: "^.*feat[(\\w)]*:+.*$"
       order: 100
-    - title: "Refactoring"
-      regexp: "^.*refactor[(\\w)]*:+.*$"
+    - title: "New Refactorings"
       order: 150
     - title: "Bug Fixes"
       regexp: "^.*fix[(\\w)]*:+.*$"
       order: 200
+    - title: "Dependency Updates"
+      regexp: "^.*(feat|fix)\\(deps\\)*:+.*$"
+      order: 300
     - title: "Documentation Updates"
       regexp: "^.*docs[(\\w)]*:+.*$"
       order: 400
