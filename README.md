@@ -2,6 +2,8 @@
 
 [![gserver](http://dockeri.co/image/snowdreamtech/gserver)](https://hub.docker.com/r/snowdreamtech/gserver)
 
+A Simple Static HTTP Server built with gin and golang. cross platform, zero configuation
+
 ## Installation
 
 ### CLI
