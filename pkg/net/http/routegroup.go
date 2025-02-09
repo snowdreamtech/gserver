@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"net/http"
 	"path"
+	"path/filepath"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -46,8 +47,9 @@ func createStaticHandler(group *gin.RouterGroup, relativePath string, fs http.Fi
 
 	return func(c *gin.Context) {
 		file := c.Param("filepath")
+
 		// Check if file exists and/or if we have permission to access it
-		f, err := fs.Open(file)
+		f, err := fs.Open(filepath.Clean(file))
 		if err != nil {
 			c.Writer.WriteHeader(http.StatusNotFound)
 

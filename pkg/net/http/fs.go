@@ -13,6 +13,7 @@ import (
 	"net/http"
 	"net/url"
 	"path"
+	"path/filepath"
 	"sort"
 	"strings"
 	"time"
@@ -137,7 +138,7 @@ func serveFile(w http.ResponseWriter, r *http.Request, fs http.FileSystem, name 
 		return
 	}
 
-	f, err := fs.Open(name)
+	f, err := fs.Open(filepath.Clean(name))
 	if err != nil {
 		msg, code := toHTTPError(err)
 		http.Error(w, msg, code)
@@ -179,7 +180,7 @@ func serveFile(w http.ResponseWriter, r *http.Request, fs http.FileSystem, name 
 
 		// use contents of index.html for directory, if present
 		index := strings.TrimSuffix(name, "/") + indexPage
-		ff, err := fs.Open(index)
+		ff, err := fs.Open(filepath.Clean(index))
 		if err == nil {
 			defer ff.Close()
 			dd, err := ff.Stat()
