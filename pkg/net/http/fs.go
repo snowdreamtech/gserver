@@ -12,6 +12,7 @@ import (
 	"io/fs"
 	"net/http"
 	"net/url"
+	"html"
 	"path"
 	"path/filepath"
 	"sort"
@@ -241,7 +242,7 @@ func dirList(w http.ResponseWriter, r *http.Request, f http.File) {
 		timeformat = app.AutoIndexTimeFormat
 	}
 
-	title := fmt.Sprintf("Index of %s", r.URL)
+	title := fmt.Sprintf("Index of %s", html.EscapeString(r.URL.String()))
 
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 
