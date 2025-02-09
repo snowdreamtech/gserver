@@ -1,6 +1,10 @@
 package configs
 
-import "github.com/gin-gonic/gin"
+import (
+	"os"
+
+	"github.com/gin-gonic/gin"
+)
 
 // DatabaseConfig Database Config
 type DatabaseConfig struct {
@@ -19,8 +23,8 @@ var defaultDatabaseConfig = DatabaseConfig{
 	Host:     "localhost",
 	Port:     5432,
 	Dbname:   "postgres",
-	User:     "postgres",
-	Password: "postgres",
+	User:     os.Getenv("DB_USER"),
+	Password: os.Getenv("DB_PASSWORD"),
 	TimeZone: "Asia/Shanghai",
 	DSN:      "",
 }
