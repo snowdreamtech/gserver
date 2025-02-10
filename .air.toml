@@ -7,11 +7,11 @@ tmp_dir = "tmp"
 
 [build]
 # Just plain old shell command. You could use `make` as well.
-cmd = "go build -o ./build/bin/go_http_server ."
+cmd = "go build -o ./build/bin/gserver ."
 # Binary file yields from `cmd`.
-bin = "GIN_MODE=debug ./build/bin/go_http_server"
+bin = "GIN_MODE=debug ./build/bin/gserver"
 # Customize binary.
-full_bin = "GIN_MODE=debug ./build/bin/go_http_server"
+full_bin = "GIN_MODE=debug ./build/bin/gserver"
 # Watch these filename extensions.
 include_ext = ["go", "tpl", "tmpl", "html", "vue", "toml", "env", "json", "xml", "js", "css"]
 # Ignore these filename extensions or directories.
