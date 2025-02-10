@@ -25,6 +25,9 @@ var (
 	//CommitHashFull Commit Hash
 	CommitHashFull string
 
+	//COPYRIGHT COPYRIGHT
+	COPYRIGHT string
+
 	//LICENSE LICENSE
 	LICENSE string
 )

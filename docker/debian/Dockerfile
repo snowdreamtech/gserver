@@ -6,10 +6,47 @@ USER root
 # Set the workdir
 WORKDIR /root
 
+ENV ProjectName="gserver" \
+    Author="Snowdream Tech <snowdreamtech@qq.com>" \
+    COPYRIGHT="Copyright (c) 2023-present SnowdreamTech Inc." \
+    LICENSE="MIT <https://github.com/snowdreamtech/gserver/blob/main/LICENSE> " \
+    CmdPath="github.com/snowdreamtech/gserver/pkg/env"  \
+    BuildTime=N/A \
+    CommitHash=N/A \
+    CommitHashFull=N/A \
+    GoVersion=N/A  \
+    GitTag=N/A \
+    Debug=false
+
 COPY . .
 
+RUN set -eux \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qqy update  \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qqy install --no-install-recommends \ 
+    git \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qqy --purge autoremove \
+    && DEBIAN_FRONTEND=noninteractive apt-get -qqy clean \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm -rf /tmp/* \
+    && rm -rf /var/tmp/*
+
 RUN go mod tidy \
-    && go build -v -o gserver 
+    && BuildTime=$(date -u +'%Y.%m.%d %H:%M:%S %z') \
+    && GoVersion=$(go version | awk '{print $3,$4}') \
+    && CommitHash=$(git log -1 --pretty=format:%h 2>/dev/null || echo 'N/A') \
+    && CommitHashFull=$(git log -1 --pretty=format:%H 2>/dev/null || echo 'N/A') \
+    && GitTag=$(git describe --tags --abbrev=0 2>/dev/null|| echo 'N/A') \
+    && LDGOFLAGS="-X '${CmdPath}.ProjectName=${ProjectName}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.Author=${Author}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.BuildTime=${BuildTime}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.CommitHash=${CommitHash}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.CommitHashFull=${CommitHashFull}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.GoVersion=${GoVersion}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.GitTag=${GitTag}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.COPYRIGHT=${COPYRIGHT}'" \
+    && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.LICENSE=${LICENSE}'" \
+    && go build -trimpath -ldflags "${LDGOFLAGS} -s -w" -v -o gserver 
+
 
 
 
