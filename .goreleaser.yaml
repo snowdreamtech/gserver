@@ -23,15 +23,15 @@ builds:
       - -v
     ldflags:
       - -s -w
-      - -X "github.com/snowdreamtech/gserver/pkg/env.ProjectName=gserver"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.Author=Snowdream Tech <snowdreamtech@qq.com>"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.BuildTime=$(date -u +'%Y.%m.%d %H:%M:%S %z')"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.CommitHash=$(git log -1 --pretty=format:%h 2>/dev/null || echo 'N/A')"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.CommitHashFull=$(git log -1 --pretty=format:%H 2>/dev/null || echo 'N/A')"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.GoVersion=$(go version | awk '{print $3,$4}')"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.GitTag=$(git describe --tags --abbrev=0 2>/dev/null|| echo 'N/A')"
-      - -X "github.com/snowdreamtech/gserver/pkg/env.COPYRIGHT=Copyright (c) 2023-present SnowdreamTech Inc."
-      - -X "github.com/snowdreamtech/gserver/pkg/env.LICENSE=MIT <https://github.com/snowdreamtech/gserver/blob/main/LICENSE>"
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.ProjectName=gserver'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.Author=Snowdream Tech <snowdreamtech@qq.com>'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.BuildTime=$(date -u +'%Y.%m.%d %H:%M:%S %z')'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.CommitHash=$(git log -1 --pretty=format:%h 2>/dev/null || echo 'N/A')'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.CommitHashFull=$(git log -1 --pretty=format:%H 2>/dev/null || echo 'N/A')'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.GoVersion=$(go version | awk '{print $3,$4}')'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.GitTag=$(git describe --tags --abbrev=0 2>/dev/null|| echo 'N/A')'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.COPYRIGHT=Copyright (c) 2023-present SnowdreamTech Inc.'
+      - -X 'github.com/snowdreamtech/gserver/pkg/env.LICENSE=MIT <https://github.com/snowdreamtech/gserver/blob/main/LICENSE>'
     goos:
       # - aix
       # - android
