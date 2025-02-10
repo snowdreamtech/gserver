@@ -55,7 +55,7 @@ LABEL org.opencontainers.image.authors="Snowdream Tech" \
     org.opencontainers.image.licenses="MIT" \
     org.opencontainers.image.source="https://github.com/snowdreamtech/gserver" \
     org.opencontainers.image.vendor="Snowdream Tech" \
-    org.opencontainers.image.version="0.0.3" \
+    org.opencontainers.image.version="0.0.5" \
     org.opencontainers.image.url="https://github.com/snowdreamtech/gserver"
 
 # Switch to the user
