@@ -9,7 +9,7 @@ WORKDIR /root
 ENV ProjectName="gserver" \
     Author="Snowdream Tech <snowdreamtech@qq.com>" \
     COPYRIGHT="Copyright (c) 2023-present SnowdreamTech Inc." \
-    LICENSE="MIT <https://github.com/snowdreamtech/gserver/blob/main/LICENSE> " \
+    LICENSE="MIT <https://github.com/snowdreamtech/gserver/blob/main/LICENSE>" \
     CmdPath="github.com/snowdreamtech/gserver/pkg/env"  \
     BuildTime=N/A \
     CommitHash=N/A \
