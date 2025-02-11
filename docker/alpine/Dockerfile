@@ -24,7 +24,7 @@ RUN apk add --no-cache \
     git
 
 RUN go mod tidy \
-    && BuildTime=$(date -u +'%Y.%m.%d %H:%M:%S %z') \
+    && BuildTime=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
     && GoVersion=$(go version | awk '{print $3,$4}') \
     && CommitHash=$(git log -1 --pretty=format:%h 2>/dev/null || echo 'N/A') \
     && CommitHashFull=$(git log -1 --pretty=format:%H 2>/dev/null || echo 'N/A') \
