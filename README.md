@@ -6,6 +6,10 @@ A Simple Static HTTP Server built with gin and golang. cross platform, zero conf
 
 ## Installation
 
+### Binary
+
+[Releases](https://github.com/snowdreamtech/gserver/releases/latest)
+
 ### CLI
 
 ```bash
