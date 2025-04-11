@@ -1,6 +1,6 @@
 # gserver
 
-[![gserver](http://dockeri.co/image/snowdreamtech/gserver)](https://hub.docker.com/r/snowdreamtech/gserver)
+[![dockeri.co](https://dockerico.blankenship.io/image/snowdreamtech/gserver)](https://hub.docker.com/r/snowdreamtech/gserver)
 
 A Simple Static HTTP Server built with gin and golang. cross platform, zero configuation
 
