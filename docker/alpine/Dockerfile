@@ -1,4 +1,7 @@
-FROM snowdreamtech/golang:1.23.5-alpine3.21 AS builder
+FROM --platform=$BUILDPLATFORM snowdreamtech/golang:1.23.7-alpine3.21 AS builder
+
+ARG TARGETOS
+ARG TARGETARCH
 
 # Switch to the user
 USER root
@@ -38,13 +41,13 @@ RUN go mod tidy \
     && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.GitTag=${GitTag}'" \
     && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.COPYRIGHT=${COPYRIGHT}'" \
     && LDGOFLAGS="${LDGOFLAGS} -X '${CmdPath}.LICENSE=${LICENSE}'" \
-    && go build -trimpath -ldflags "${LDGOFLAGS} -s -w" -v -o gserver 
+    && CGO_ENABLED=0 GOOS=${TARGETOS} GOARCH=${TARGETARCH} go build -trimpath -ldflags "${LDGOFLAGS} -s -w" -v -o gserver 
 
 
 
 
 
-FROM snowdreamtech/alpine:3.21.0
+FROM snowdreamtech/alpine:3.21.3
 
 # OCI annotations to image
 LABEL org.opencontainers.image.authors="Snowdream Tech" \
